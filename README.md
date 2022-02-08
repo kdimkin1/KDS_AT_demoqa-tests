@@ -1,27 +1,9 @@
 # GUI Automation Tests for https://demoqa.com/automation-practice-form
-See cloud/autotests/tests/AutomationPracticeFormFillTests.java
-* apfSuccessFillTest      --  AutomationPracticeFormFillTests
-* apfUnsuccessFillTest    --  AutomationPracticeFormFillTests(Unsuccess)
-
-# USAGE examples
-
-### For run remote tests need fill remote.properties or to pass value:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
-
-
-Run tests with filled remote.properties:
+See 
 ```bash
-gradle clean test
+cloud/autotests/tests/AutomationPracticeFormFillTests.java
 ```
+* apfSuccessFillTest        --  AutomationPracticeFormFillTests
+* apfUnsuccessFillTest      --  AutomationPracticeFormFillTests(Unsuccess)
 
-Serve report:
-```bash
-allure serve build/allure-results
-```
+
