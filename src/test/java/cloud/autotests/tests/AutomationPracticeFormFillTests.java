@@ -75,7 +75,7 @@ public class AutomationPracticeFormFillTests {
         });
 
         step("Заполнить поле Subject (Social Studies, Accounting)", () -> {
-            $("div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3").click(); //setValue("Social Studies");
+            $("div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3").click();
             $("#subjectsInput").setValue("Social Studies").pressEnter();
             $("#subjectsInput").setValue("Accounting").pressEnter();
         });
@@ -101,28 +101,26 @@ public class AutomationPracticeFormFillTests {
                 $("#close-fixedban > img").click();
             }
             //#state > div > div.css-1wy0on6 > div > svg
-            $("#state > div > div.css-1wy0on6 > div > svg").click();
+            $("#state").click();
             $(byText("Haryana")).click();
         });
 
         step("Заполнить поле City (Karnal)", () -> {
             //#city > div > div.css-1wy0on6 > div > svg
-            $("#city > div > div.css-1wy0on6 > div > svg").click();
+            $("#city").click();
             $(byText("Karnal")).click();
         });
 
         step("Отправить форму (Submit)", () -> {
             $("#submit").click();
         });
-sleep (100);
+
         step("Проверить успешную отправку (содержание формы ответа).", () -> {
             step("// todo: just add selenium action");
             //body > div.fade.modal.show > div > div > div.modal-header
             $(".modal-header").shouldHave(text("Thanks for submitting the form"));
-            //body > div.fade.modal.show > div > div > div.modal-body > div
             //body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody
-            //body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(1) > td:nth-child(2)
-            $("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody").shouldHave(
+            $(".table").shouldHave(
                     text("Anton Gorodetskiy"),
                     text("Anton.Gorodetskiy@mail.com"),
                     text("Male"),
@@ -133,10 +131,7 @@ sleep (100);
                     text("AntonG.jpg"),
                     text("Karnal Bus Stand"),
                     text("Haryana Karnal"));
-
-
         });
-        sleep (1000);
         step("Закрыть форму (Close)", () -> {
             // #closeLargeModal
             $("#closeLargeModal").click();
@@ -184,7 +179,7 @@ sleep (100);
         });
 
         step("Заполнить поле Subject (Social Studies, Accounting)", () -> {
-            $("div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3").click(); //setValue("Social Studies");
+            $("div.subjects-auto-complete__value-container.subjects-auto-complete__value-container--is-multi.css-1hwfws3").click();
             $("#subjectsInput").setValue("Social Studies").pressEnter();
             $("#subjectsInput").setValue("Accounting").pressEnter();
         });
@@ -210,28 +205,24 @@ sleep (100);
                 $("#close-fixedban > img").click();
             }
             //#state > div > div.css-1wy0on6 > div > svg
-            $("#state > div > div.css-1wy0on6 > div > svg").click();
+            $("#state").click();
             $(byText("Haryana")).click();
         });
 
         step("Заполнить поле City (Karnal)", () -> {
             //#city > div > div.css-1wy0on6 > div > svg
-            $("#city > div > div.css-1wy0on6 > div > svg").click();
+            $("#city").click();
             $(byText("Karnal")).click();
         });
 
         step("Отправить форму (Submit)", () -> {
             $("#submit").click();
         });
-        sleep (100);
         step("Проверить успешную отправку (содержание формы ответа).", () -> {
-            step("// todo: just add selenium action");
             //body > div.fade.modal.show > div > div > div.modal-header
             $(".modal-header").shouldHave(text("Thanks for submitting the form"));
-            //body > div.fade.modal.show > div > div > div.modal-body > div
             //body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody
-            //body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody > tr:nth-child(1) > td:nth-child(2)
-            $("body > div.fade.modal.show > div > div > div.modal-body > div > table > tbody").shouldHave(
+            $(".table").shouldHave(
                     text("Fedor Gorodetskiy"),
                     text("Anton.Gorodetskiy@mail.com"),
                     text("Male"),
@@ -242,10 +233,7 @@ sleep (100);
                     text("AntonG.jpg"),
                     text("Karnal Bus Stand"),
                     text("Haryana Karnal"));
-
-
         });
-        sleep (1000);
         step("Закрыть форму (Close)", () -> {
             // #closeLargeModal
             $("#closeLargeModal").click();
@@ -261,7 +249,6 @@ sleep (100);
     void titleTest() {
         step("Open url 'https://demoqa.com/automation-practice-form'", () ->
             open("/automation-practice-form"));
-
         step("Page title should have text 'ToolsQA'", () -> {
             String expectedTitle = "ToolsQA";
             String actualTitle = title();
