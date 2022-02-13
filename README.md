@@ -9,7 +9,7 @@ See details:
 ```bash
 cloud/autotests/tests/AutomationPracticeFormFillTests.java
 ```
-## UI Tests
+## UI Tests (with PageObject)
 * apfSuccessFillTest        --  AutomationPracticeFormFillTests(Success)
 * apfUnsuccessFillTest      --  AutomationPracticeFormFillTests(Unsuccess)
 

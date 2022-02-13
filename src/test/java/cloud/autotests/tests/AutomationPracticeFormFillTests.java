@@ -248,7 +248,7 @@ public class AutomationPracticeFormFillTests {
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://demoqa.com/automation-practice-form'", () ->
-            open("/automation-practice-form"));
+                open("/automation-practice-form"));
         step("Page title should have text 'ToolsQA'", () -> {
             String expectedTitle = "ToolsQA";
             String actualTitle = title();
@@ -262,7 +262,7 @@ public class AutomationPracticeFormFillTests {
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("Open url 'https://demoqa.com/automation-practice-form'", () ->
-            open("/automation-practice-form"));
+                open("/automation-practice-form"));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
